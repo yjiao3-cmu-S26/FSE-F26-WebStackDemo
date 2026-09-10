@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap-ejs-jquery-fetch-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "axios": "^1.4.0"
+  }
+}
