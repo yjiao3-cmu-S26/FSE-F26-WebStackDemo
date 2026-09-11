@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Something went wrong</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fse.css">
+</head>
+<body class="fse-body">
+
+  <main class="container fse-form-wrap">
+    <div class="card shadow-sm p-4 p-md-5 mx-auto fse-card fse-card-wide">
+
+      <div class="text-center mb-4">
+        <div class="display-1 fw-bold text-danger mb-2"><%= status %></div>
+        <h1 class="h3 fw-bold mb-2">There is an error</h1>
+        <p class="text-secondary mb-0"><%= message %></p>
+      </div>
+
+      <div class="alert alert-light border mb-4">
+        <div class="small text-secondary mb-1">The request that failed</div>
+        <code class="fs-6"><%= method %> <%= path %></code>
+      </div>
+
+      <p class="text-secondary">
+        A <strong>404</strong> from an API route does not mean the server is down &mdash;
+        the server answered. It means no handler matched
+        <em>that method on that path</em>. The browser sent one verb; the
+        server is listening for a different one.
+      </p>
+
+      <p class="text-secondary mb-4">
+        Open DevTools &rarr; Network, click the failed request, and compare
+        the <strong>Request Method</strong> against what
+        <code>server/routers/attendance.router.js</code> declares.
+      </p>
+
+      <p class="mb-0 text-center">
+        <a href="/attendance" class="link-secondary small">Back to the form</a>
+        <span class="text-secondary small mx-2">&middot;</span>
+        <a href="/" class="link-secondary small">Home</a>
+      </p>
+
+    </div>
+  </main>
+
+</body>
+</html>

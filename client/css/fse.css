@@ -1,0 +1,44 @@
+/* Small amount of custom CSS on top of Bootstrap. */
+
+.fse-body {
+  background: #f6f7f9;
+  min-height: 100vh;
+}
+
+.fse-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.fse-cta {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, .28);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.fse-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(13, 110, 253, .34);
+}
+
+.fse-form-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.fse-card {
+  max-width: 460px;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+}
+
+.fse-card-wide { max-width: 680px; }
