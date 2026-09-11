@@ -26,5 +26,6 @@ $('#jquery-btn').on('click', function () {
 
   // TODO:
   // Use jQuery .text() to change #jquery-message.
+  $('#jquery-message').text('Hello from jQuery!');
 
 });

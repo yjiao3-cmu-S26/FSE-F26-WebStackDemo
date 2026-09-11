@@ -14,8 +14,15 @@
 
 const apiButton = document.querySelector('#api-btn');
 
-apiButton.addEventListener('click', async function () {
+apiButton.addEventListener('click', function () {
 
-  // TODO:
+  axios.get('/api/hello')
+    .then(response => {
+      document.querySelector('#api-message').textContent = response.data.message;
+    })
+    .catch(error => {
+      const errorMessage = error.response.data.error;
+      document.querySelector('#api-message').textContent = errorMessage;
+    });
 
 });

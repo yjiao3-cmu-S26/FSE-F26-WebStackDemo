@@ -32,15 +32,19 @@
     class="text-secondary"
     ...
   -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
 
 </head>
 
-<body>
+<body class="container">
 
-  <div>
-    <h1>Student Profile</h1>
+  <div class="card">
+    <h1 class="card-header">Student Profile</h1>
 
-    <div>
+    <div class="card-body">
 
       <!--
         TODO 2 — EJS Variables
@@ -58,8 +62,8 @@
         &lt;h3&gt;&lt;%= name %&gt;&lt;/h3&gt;
       -->
 
-      <h3>Student 1</h3>
-      <p>Software Engineering</p>
+      <h3 class="card-title"><%= name %></h3>
+      <p class="card-text"><%= major %></p>
 
 
       <!--
@@ -82,11 +86,15 @@
           TA
         </span>
       -->
-
+      <% if (isTA) { %>
+        <span class="badge text-bg-success">
+          TA
+        </span>
+      <% } %>
 
       <hr>
 
-      <h2>jQuery Demo</h2>
+      <h2 class="text-primary">jQuery Demo</h2>
 
       <!--
         TODO 4 — jQuery
@@ -116,17 +124,17 @@
         <script src="/app.js"></script>
       -->
 
-      <button id="jquery-btn">
+      <button class="btn btn-primary" id="jquery-btn">
         Run jQuery Demo
       </button>
 
-      <p id="jquery-message">
+      <p class="text-muted" id="jquery-message">
         Waiting for jQuery...
       </p>
 
       <hr>
 
-      <h2>Axios Demo</h2>
+      <h2 class="text-primary">Axios Demo</h2>
 
       <!--
         TODO 5 — Axios
@@ -140,11 +148,11 @@
         <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
       -->
 
-      <button id="api-btn">
+      <button class="btn btn-primary" id="api-btn">
         Load Message from API
       </button>
 
-      <p id="api-message">
+      <p class="text-muted" id="api-message">
         Waiting for API response...
       </p>
 
@@ -159,6 +167,10 @@
     Keep jQuery before app.js because app.js uses jQuery.
     Keep Axios before api.js because api.js uses axios.
   -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+  <script src="/app.js"></script>
+  <script src="/api.js"></script>
 
 </body>
 </html>
