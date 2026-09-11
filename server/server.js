@@ -20,9 +20,9 @@ app.get('/', (req, res) => {
   });
 });
 
-// Simple API endpoint used by the Fetch demo.
+// Simple API endpoint used by the Axios demo.
 app.get('/api/hello', (req, res) => {
-  res.json({
+  res.status(200).json({
     message: 'Hello from the server!'
   });
 });
