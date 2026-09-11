@@ -25,6 +25,14 @@ app.get('/api/hello', (req, res) => {
   res.status(200).json({
     message: 'Hello from the server!'
   });
+
+  // res.status(404).json({
+  //   error: 'Not found'
+  // });
+
+  // res.status(500).json({
+  //   error: 'Internal server error'
+  // });
 });
 
 app.listen(PORT, () => {
